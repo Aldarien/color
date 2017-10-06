@@ -1,0 +1,23 @@
+{
+	"name" : "aldarien/color",
+	"description" : "Color names, transformations and random",
+	"type" : "library",
+	"require-dev" : {
+		"phpunit/phpunit" : "^6.4"
+	},
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Aldarien",
+			"email" : "aldarien85@gmail.com"
+		}
+	],
+	"require" : {
+		"mistic100/randomcolor" : "^1.0",
+		"mischiefcollective/colorjizz" : "^1.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Lib\\Color\\" : "src"
+		}
+	}
+}
