@@ -1,6 +1,11 @@
 <?php
 namespace Lib\Color;
 
+/**
+ * Lightness value from 0 to 100
+ * @author Aldarien
+ *
+ */
 class Lightness
 {
 	public const BLACK = 0;

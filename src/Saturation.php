@@ -1,6 +1,11 @@
 <?php
 namespace Lib\Color;
 
+/**
+ * Saturation value from 0 to 100
+ * @author Aldarien
+ *
+ */
 class Saturation
 {
 	public const BLACK = 0;
