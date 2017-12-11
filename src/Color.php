@@ -94,9 +94,9 @@ class Color
 	/**
 	 * Darken the color by % value
 	 * @param double $value positive value to darken in [0, 1] or [0, 100] range.
-	 * @param boolean $percent (optional) if in [0, 1] or [0, 100] range.
+	 * @param bool $percent (optional) if in [0, 1] or [0, 100] range.
 	 */
-	public function darken(double $value, boolean $percent = false)
+	public function darken(double $value, bool $percent = false)
 	{
 		if ($percent) {
 			$value /= 100;
@@ -114,9 +114,9 @@ class Color
 	/**
 	 * Lighten the color by % value
 	 * @param double $value positive value to lighten in [0, 1] or [0, 100] range.
-	 * @param boolean $percent (optional) if in [0, 1] or [0, 100] range.
+	 * @param bool $percent (optional) if in [0, 1] or [0, 100] range.
 	 */
-	public function lighten(double $value, boolean $percent = false)
+	public function lighten(double $value, bool $percent = false)
 	{
 		if ($percent) {
 			$value /= 100;
