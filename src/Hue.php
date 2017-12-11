@@ -1,6 +1,12 @@
 <?php
 namespace Lib\Color;
 
+/**
+ * Color wheel
+ * 0 to 360 degrees
+ * @author Aldarien
+ *
+ */
 class Hue
 {
 	public const BLACK = 0;

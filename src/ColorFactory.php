@@ -44,7 +44,17 @@ class ColorFactory
 		}
 		return $color;
 	}
-	public static function random($n = 1, $hue = null, $luminosity = null, $prng = null)
+	
+	/**
+	 * Random according to https://github.com/mistic100/RandomColor.php
+	 * @param int $n
+	 * @param string|null $hue red, orange, yellow, green, blue, purple, pink and monochrome or #hex or [0, 360]
+	 * @param string|null $luminosity bright, light or dark
+	 * @param string|null $format hsv, hsl, hslCss, rgb, rgbCss, and hex
+	 * @param string|null $prng random generator, default mt_rand
+	 * @return \Lib\Color\Color|\Lib\Color\Color[]
+	 */
+	public static function random(int $n = 1, $hue = null, $luminosity = null, $format = null, $prng = null)
 	{
 		$args = [];
 		if ($hue != null) {
@@ -52,6 +62,9 @@ class ColorFactory
 		}
 		if ($luminosity != null) {
 			$args['luminosity'] = $luminosity;
+		}
+		if ($format != null) {
+			$args['format'] = $format;
 		}
 		if ($prng != null) {
 			$args['prng'] = $prng;

@@ -1,13 +1,13 @@
 <?php
-$basic_colors = ['black', 'blue', 'brown', 'cyan', 'green', 'orange', 'pink', 'red', 'violet', 'white', 'yellow'];
-foreach ($basic_colors as $i => $color) {
-	$basic_colors[$color] = \Lib\Color\ColorFactory::HSL(
+$__COLORS = ['black', 'blue', 'brown', 'cyan', 'green', 'orange', 'pink', 'red', 'violet', 'white', 'yellow'];
+foreach ($__COLORS as $i => $color) {
+	$__COLORS[$color] = \Lib\Color\ColorFactory::HSL(
 			constant('\Lib\Color\Hue::' . strtoupper($color)),
 			constant('\Lib\Color\Lightness::' . strtoupper($color)),
 			constant('\Lib\Color\Saturation::' . strtoupper($color)),
 			$color
 	);
-	unset($basic_colors[$i]);
+	unset($__COLORS[$i]);
 }
-$basic_colors = (object) $basic_colors;
+$__COLORS = (object) $__COLORS;
 ?>
