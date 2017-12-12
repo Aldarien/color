@@ -44,6 +44,19 @@ class ColorFactory
 		}
 		return $color;
 	}
+	/**
+	 * Return a predifined color
+	 * @param string $name
+	 * @return Color
+	 */
+	public static function color(string $name)
+	{
+		include_once '../definitions/definitions.php';
+		try {
+			return $__COLORS->$name;
+		} catch (\Exception $e) {
+		}
+	}
 	
 	/**
 	 * Random according to https://github.com/mistic100/RandomColor.php
