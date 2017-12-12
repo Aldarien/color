@@ -1,7 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Lib\Color\ColorFactory;
-use Lib\Color\Color;
 use MischiefCollective\ColorJizz\Formats\RGB;
 
 class FactoryTest extends TestCase
@@ -16,6 +15,17 @@ class FactoryTest extends TestCase
 		$color2 = new RGB($r, $g, $b);
 		$color2 = $color->toHSL();
 		$this->assertEquals($color2, $color);
+	}
+	public function testColor()
+	{
+		$name = 'blue';
+		$color = ColorFactory::color($name);
+		$h = 240;
+		$s = 100;
+		$l = 50;
+		$this->assertEquals($h, $color->getHue()->getValue());
+		$this->assertEquals($s, $color->getSaturation()->getValue());
+		$this->assertEquals($l, $color->getLightness()->getValue());
 	}
 }
 ?>

@@ -43,6 +43,6 @@ class ColorTest extends TestCase
 		$this->color->setSaturation($saturation);
 		$saturation = new Saturation($saturation);
 		$this->assertEquals($saturation, $this->color->getSaturation());
-	}
+	}	
 }
 ?>
