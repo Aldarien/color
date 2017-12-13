@@ -51,10 +51,12 @@ class ColorFactory
 	 */
 	public static function color(string $name)
 	{
-		include_once '../definitions/definitions.php';
+		include dirname(__DIR__) . '/definitions/definitions.php';
+		
 		try {
-			return $__COLORS->$name;
+			return $__COLORS->{$name};
 		} catch (\Exception $e) {
+			var_export($e->getMessage());
 		}
 	}
 	
